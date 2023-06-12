@@ -18,7 +18,7 @@ ricercaLibro(chiave: string) {
 trovaLibro(codice: string) {
   return this.lista.filter(libro => {
     return libro.codice === codice;
-  });
+  })[0];
 }
 
 aggiungiLibro(titolo: string, autore: string, codice: string) {
@@ -29,7 +29,7 @@ aggiungiLibro(titolo: string, autore: string, codice: string) {
   
 rimuoviLibro(codice: string) {
     this.lista = this.lista.filter(libro => {
-      libro.codice !== codice
+      return libro.codice !== codice
   });
 }
 }

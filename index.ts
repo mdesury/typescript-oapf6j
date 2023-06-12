@@ -14,10 +14,10 @@ const archivio = new Archivio();
 
 archivio.aggiungiLibro('Harry Potter', 'JK Rowling', 'ISBN123');
 archivio.aggiungiLibro('Il Signore degli Anelli', 'J.R.R. Tolkien', 'ISBN456');
+archivio.aggiungiLibro('Il Signore degli Anelli', 'J.R.R. Tolkien', 'ISB456');
 
 console.log(archivio.lista);
 
-console.log(archivio.trovaLibro('ISBN456'));
+console.log(archivio.trovaLibro('ISB456'));
 
-archivio.rimuoviLibro('ISBN456');
-console.log('Lista libri dopo rimozione:', archivio.lista);
+console.log('Lista libri dopo rimozione:', archivio.rimuoviLibro('ISB456'), archivio.lista);
