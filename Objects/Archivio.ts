@@ -9,14 +9,15 @@ constructor() {
 
 ricercaLibro(chiave: string) {
  return this.lista.filter(libro => {
-    libro.titolo.toLowerCase().includes(chiave.toLowerCase()) ||
+    return libro.titolo.toLowerCase().includes(chiave.toLowerCase()) ||
     libro.autore.toLowerCase().includes(chiave.toLowerCase()) ||
     libro.codice.toLowerCase().includes(chiave.toLowerCase())
   })
-} */
+} 
 
 trovaLibro(codice: string) {
-  return this.lista.find(libro => libro.codice === codice)
+  return this.lista.filter(libro => {
+    return libro.codice === codice;
   });
 }
 
@@ -32,7 +33,7 @@ rimuoviLibro(codice: string) {
   });
 }
 
-}
+
 
 
 
