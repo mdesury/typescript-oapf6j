@@ -1,5 +1,4 @@
-
- export class Libro {
+export class Libro {
   titolo: string;
   autore: string;
   posizione: string;
@@ -11,17 +10,5 @@
     this.posizione = posizione;
     this.prestito = prestito;
   }
-
-  Ricerca: string = "";
-  libriTrovati: [];
-
-  RicercaTitolo() {
-    this.libriTrovati = this.titolo.filter(libro: string) {
-      libro.titolo.toLowerCase().includes(this.Ricerca.toLowerCase())
-    });
-
-  RicercaAutore() {
-    this.libriTrovati = this.autore.filter(libro: string) {
-      libro.autore.toLowerCase().includes(this.Ricerca.toLowerCase())
-    });
 }
+ 
