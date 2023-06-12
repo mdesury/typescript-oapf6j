@@ -1,13 +1,13 @@
 export class Libro {
   titolo: string;
   autore: string;
-  posizione: string;
+  codice: string;
   prestito: string;
 
-  constructor(titolo:string, autore:string, posizione:string, prestito: string) {
+  constructor(titolo:string, autore:string, codice:string, prestito: string) {
     this.titolo = titolo;
     this.autore = autore;
-    this.posizione = posizione;
+    this.codice = codice;
     this.prestito = prestito;
   }
 }

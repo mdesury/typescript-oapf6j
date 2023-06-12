@@ -7,22 +7,37 @@ constructor() {
   this.lista = new Array<Libro>;
 }
 
-ricercaLibri(chiave: string) {
+ricercaLibro(chiave: string) {
  return this.lista.filter(libro => {
     libro.titolo.toLowerCase().includes(chiave.toLowerCase()) ||
     libro.autore.toLowerCase().includes(chiave.toLowerCase()) ||
-    libro.posizione.toLowerCase().includes(chiave.toLowerCase())
-  });
+    libro.codice.toLowerCase().includes(chiave.toLowerCase())
+  })
+} */
+
+trovaLibro(codice: string) {
+  return this.lista.filter(libro => {
+    libro.codice === codice
+  })[0];
 }
-  aggiungiLibri(libro: string) {
-    this.lista.push(libro);
+
+aggiungiLibro(titolo:string, autore:string, codice:string) {
+  if (!this.trovaLibro(codice)) {
+    this.lista.push(new Libro(titolo, autore, codice, ""));
   }
+}
   
-  rimuoviLibri(titolo: string, autore: string) {
+rimuoviLibro(codice: string) {
     this.lista = this.lista.filter(libro => {
-      libro.titolo !== titolo || libro.autore !== autore)
+      libro.codice !== codice
   });
 }
+
+}
+
+
+
+
 
 
 
