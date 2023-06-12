@@ -12,9 +12,12 @@ appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 
 const archivio = new Archivio();
 
+
 archivio.aggiungiLibro('Harry Potter', 'JK Rowling', 'ISBN123');
 archivio.aggiungiLibro('Il Signore degli Anelli', 'J.R.R. Tolkien', 'ISBN456');
 archivio.aggiungiLibro('Il Signore degli Anelli', 'J.R.R. Tolkien', 'ISB456');
+
+archivio.ricercaLibro("harry");
 
 console.log(archivio.lista);
 

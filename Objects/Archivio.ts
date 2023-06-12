@@ -12,7 +12,7 @@ ricercaLibro(chiave: string) {
     return libro.titolo.toLowerCase().includes(chiave.toLowerCase()) ||
     libro.autore.toLowerCase().includes(chiave.toLowerCase()) ||
     libro.codice.toLowerCase().includes(chiave.toLowerCase())
-  })
+  });
 } 
 
 trovaLibro(codice: string) {
