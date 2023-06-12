@@ -16,12 +16,11 @@ ricercaLibro(chiave: string) {
 } */
 
 trovaLibro(codice: string) {
-  return this.lista.filter(libro => {
-    libro.codice === codice
-  })[0];
+  return this.lista.find(libro => libro.codice === codice)
+  });
 }
 
-aggiungiLibro(titolo:string, autore:string, codice:string) {
+aggiungiLibro(titolo: string, autore: string, codice: string) {
   if (!this.trovaLibro(codice)) {
     this.lista.push(new Libro(titolo, autore, codice, ""));
   }
