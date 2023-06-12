@@ -32,6 +32,7 @@ rimuoviLibro(codice: string) {
       libro.codice !== codice
   });
 }
+}
 
 
 
