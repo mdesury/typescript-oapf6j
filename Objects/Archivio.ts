@@ -2,9 +2,11 @@ import { Libro } from "./Libro";
 
 export class Archivio {
   lista: Array<Libro>
+  libriPrestati: Array<Libro>
 
 constructor() {
   this.lista = new Array<Libro>;
+  this.libriPrestati = []
 }
 
 ricercaLibro(chiave: string) {
@@ -32,6 +34,27 @@ rimuoviLibro(codice: string) {
       return libro.codice !== codice
   });
 }
+
+/*trovaLibroPrestato(codice: string) {
+  return this.libriPrestati.filter(libro => {
+    return libro.codice === codice;
+  });
+}
+prestitoLibro(codice: string) {
+  const libro = this.trovaLibro(codice);
+  if (libro !== libro.prestito) {
+    this.libriPrestati.push(libro);
+    libro.prestito = true;
+  }
+  }
+}
+
+retitusciLibro() {
+  if (this.prestito === true) {
+    return this.prestito;
+  }
+}*/
+
 }
 
 
